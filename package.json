@@ -1,0 +1,88 @@
+{
+  "name": "blogging_website",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@floating-ui/react": "^0.27.15",
+    "@hookform/error-message": "^2.0.1",
+    "@reduxjs/toolkit": "^2.8.2",
+    "@tailwindcss/cli": "^4.1.11",
+    "@tailwindcss/vite": "^4.1.11",
+    "@tanstack/react-query": "^5.85.6",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.6.4",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@tiptap/extension-blockquote": "^3.0.9",
+    "@tiptap/extension-bold": "^3.0.9",
+    "@tiptap/extension-bullet-list": "^3.0.9",
+    "@tiptap/extension-code-block": "^3.0.9",
+    "@tiptap/extension-color": "^3.0.9",
+    "@tiptap/extension-heading": "^3.0.9",
+    "@tiptap/extension-highlight": "^3.0.9",
+    "@tiptap/extension-image": "^3.0.9",
+    "@tiptap/extension-italic": "^3.0.9",
+    "@tiptap/extension-link": "^3.0.9",
+    "@tiptap/extension-list-item": "^3.0.9",
+    "@tiptap/extension-ordered-list": "^3.0.9",
+    "@tiptap/extension-text-align": "^3.0.9",
+    "@tiptap/extension-text-style": "^3.0.9",
+    "@tiptap/extension-underline": "^3.0.9",
+    "@tiptap/pm": "^3.0.9",
+    "@tiptap/react": "^3.0.9",
+    "@tiptap/starter-kit": "^3.0.9",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "axios": "^1.11.0",
+    "dompurify": "^3.2.6",
+    "emailjs": "^4.0.3",
+    "framer-motion": "^12.23.12",
+    "html-react-parser": "^5.2.6",
+    "react": "^19.1.1",
+    "react-calendar-heatmap": "^1.10.0",
+    "react-dom": "^19.1.1",
+    "react-feather": "^2.0.10",
+    "react-hook-form": "^7.61.1",
+    "react-hotkeys-hook": "^5.1.0",
+    "react-icons": "^5.5.0",
+    "react-paginate": "^8.3.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^6.30.1",
+    "react-scripts": "^0.0.0",
+    "tailwindcss": "^4.1.11",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "npx vite",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "tailwindrs": "npx @tailwindcss/cli -i ./public/Asset/input.css -o ./public/Asset/output.css --watch"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.0",
+    "sass": "^1.89.2",
+    "sass-embedded": "^1.89.2",
+    "ts-node": "^10.9.2",
+    "vite": "^7.0.6"
+  }
+}

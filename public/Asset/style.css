@@ -1,0 +1,173 @@
+
+
+.slider-wrapper {
+  width: 100%;
+  height: 250px;
+  border: 1px solid #333;
+  overflow: hidden;
+  border-radius: 4px !important;
+}
+
+.slider {
+  width: 100%;
+}
+
+.slider-item {
+  float: left;
+  position: relative;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 250px;
+  font-size: 20px;
+  background: #383838;
+  text-align: center;
+  border-radius: 4px !important;
+  transition: all .2s linear;
+}
+
+.hide {
+  @extend .slider-item
+}
+
+.buttons-wrapper {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+}
+
+.buttons-wrapper .prev-button {
+  background-image: url(http://static.birgun.net/static/images/slider-arrow-left.svg);
+  background-size: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 30px;
+  width: 30px;
+  border-radius: 4px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s linear;
+}
+
+.buttons-wrapper .next-button {
+  background-image: url(http://static.birgun.net/static/images/slider-arrow-right.svg);
+  @extend .prev-button;
+}
+
+.buttons-wrapper button:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* indicators */
+
+.indicators {
+  width: 400px;
+  position: absolute;
+  bottom: -4px;
+  z-index: 2 !important;
+  text-align: center;
+}
+
+.indicators li {
+  display: inline-block;
+  margin-right: 5px;
+  width: 12px;
+  height: 12px;
+  font-size: 16px;
+  line-height: 30px;
+  border-radius: 100%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  text-indent: -9999px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.indicators li:last-child {
+  margin-right: 0;
+}
+
+.active-indicator {
+  background: rgba(0, 0, 0, 0.3) !important;
+  color: #fff !important;
+}
+.content {
+  min-height: 140px; 
+  width: 100%; 
+  margin: 0 auto; 
+}
+.full-screen-page {
+  width: 100%; 
+  max-width: none;
+  min-height: 100vh;
+}
+.button-primary-des-1 {   /*Nền trắng, chữ trắng đậm, thích hợp xài trong container có màu xanh*/
+  border-radius: 2rem;              /* rounded-4xl */
+  border-color: white;              /* border-white */
+  margin-top: 1.5rem;                /* mt-6 */
+  cursor: pointer;                   /* cursor-pointer */
+  transition: all 0.3s ease-in-out;  /* transition-all duration-300 ease-in-out */
+  color: white;                      /* text-white */
+  font-size: 1.125rem;                /* text-lg */
+  border-style: solid;               /* border-solid */
+  border-width: 1px;                  /* border-1 */
+  font-weight: 600;                   /* font-semibold */
+  padding-left: 4.5rem;               /* px-18 (18 * 0.25rem) */
+  padding-right: 4.5rem;              /* px-18 */
+  padding-top: 1rem;                  /* py-4 */
+  padding-bottom: 1rem;               /* py-4 */
+}
+.button-primary-des-2 {  /*Nền xanh, chữ trắng đậm*/
+  border-radius: 2rem;              /* rounded-4xl */
+  border-color: white;              /* border-white */
+  margin-top: 1.5rem;                /* mt-6 */
+  color: white;                      /* text-white */
+  font-size: 1.125rem;                /* text-lg */
+  border-style: solid;               /* border-solid */
+  border-width: 1px;                  /* border-1 */
+  background-color: #172554;         /* bg-blue-950 */
+  cursor: pointer;                    /* cursor-pointer */
+  transition: all 0.3s ease-in-out;   /* transition-all duration-300 ease-in-out */
+  font-weight: 600;                   /* font-semibold */
+  padding-left: 4.5rem;               /* px-18 (18 * 0.25rem = 4.5rem) */
+  padding-right: 4.5rem;              /* px-18 */
+  padding-top: 1rem;                  /* py-4 */
+  padding-bottom: 1rem;               /* py-4 */
+}
+.button-primary-des-2:hover {
+  opacity: 0.8; 
+}
+.button-primary-des-1:hover {
+  opacity: 0.8; 
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(100%); 
+  } 
+  to {
+    transform: translateX(0); 
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1; 
+  } 
+  to {
+    opacity: 0; 
+  }
+}

@@ -1,0 +1,78 @@
+const postData = [
+    {
+      blogID: '',
+      banner: 'public/Image/background-slider-2.jpg',
+      title: 'Lorem ipsum dolor, sit amet consectetur adipisicing.',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptate cum dolores distinctio ea quisquam.',
+    },
+    {
+      banner: 'public/Image/background-slider-2.jpg',
+      title: 'Lorem ipsum dolor, sit amet consectetur adipisicing.',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptate cum dolores distinctio ea quisquam.',
+    },
+    {
+      banner: 'public/Image/background-slider-2.jpg',
+      title: 'Lorem ipsum dolor, sit amet consectetur adipisicing.',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptate cum dolores distinctio ea quisquam.',
+    },
+    {
+      banner: 'public/Image/background-slider-2.jpg',
+      title: 'Lorem ipsum dolor, sit amet consectetur adipisicing.',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptate cum dolores distinctio ea quisquam.',
+    },
+    {
+      banner: 'public/Image/background-slider-2.jpg',
+      title: 'Lorem ipsum dolor, sit amet consectetur adipisicing.',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptate cum dolores distinctio ea quisquam.',
+    },
+    {
+      banner: 'public/Image/background-slider-2.jpg',
+      title: 'Lorem ipsum dolor, sit amet consectetur adipisicing.',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptate cum dolores distinctio ea quisquam.',
+    },
+    {
+      banner: 'public/Image/background-slider-2.jpg',
+      title: 'Lorem ipsum dolor, sit amet consectetur adipisicing.',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptate cum dolores distinctio ea quisquam.',
+    },
+    {
+      banner: 'public/Image/background-slider-2.jpg',
+      title: 'Lorem ipsum dolor, sit amet consectetur adipisicing.',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptate cum dolores distinctio ea quisquam.',
+    },
+    {
+      banner: 'public/Image/background-slider-2.jpg',
+      title: 'Lorem ipsum dolor, sit amet consectetur adipisicing.',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptate cum dolores distinctio ea quisquam.',
+    },
+    {
+      banner: 'public/Image/background-slider-2.jpg',
+      title: 'Lorem ipsum dolor, sit amet consectetur adipisicing.',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptate cum dolores distinctio ea quisquam.',
+    },
+    {
+      banner: 'public/Image/background-slider-2.jpg',
+      title: 'Lorem ipsum dolor, sit amet consectetur adipisicing.',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptate cum dolores distinctio ea quisquam.',
+    },
+    {
+      banner: 'public/Image/background-slider-2.jpg',
+      title: 'Lorem ipsum dolor, sit amet consectetur adipisicing.',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptate cum dolores distinctio ea quisquam.',
+    },
+    {
+      banner: 'public/Image/background-slider-2.jpg',
+      title: 'Lorem ipsum dolor, sit amet consectetur adipisicing.',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptate cum dolores distinctio ea quisquam.',
+    },
+    {
+      banner: 'public/Image/background-slider-2.jpg',
+      title: 'Lorem ipsum dolor, sit amet consectetur Be Vy Beu adipisicing.',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptate cum dolores distinctio ea quisquam.',
+    },
+    {
+      banner: 'The end',
+      title: 'Lorem ipsum dolor, sit amet consectetur adipisicing.',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptate cum dolores distinctio ea quisquam.',
+    },
+  ]
