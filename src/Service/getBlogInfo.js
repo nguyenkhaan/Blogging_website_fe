@@ -5,7 +5,7 @@ async function getBlogInfo(id)
         headers: {
             "Content-Type": "application/json"
         }, 
-        withCredentials: 'include'
+        withCredentials: true
     })
     return blogInfo
 }

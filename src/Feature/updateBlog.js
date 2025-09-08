@@ -11,7 +11,7 @@ async function updateBlog(submissionData , blogID)
         headers: {
             "Content-Type": "multipart/form-data"
         }, 
-        withCredentials: 'include'
+        withCredentials: true
     })
     return res 
 } 

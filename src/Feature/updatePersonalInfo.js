@@ -11,7 +11,7 @@ async function updatePersonalInfo(id, payload)
         headers: {
             "Content-Type": 'multipart/form-data'
         },
-        withCredentials: 'include' 
+        withCredentials: true 
     })
     return res 
 }   

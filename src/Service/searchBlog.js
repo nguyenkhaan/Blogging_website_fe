@@ -5,7 +5,7 @@ async function searchBlog(search)
         headers: {
             "Content-Type": "application/json"
         }, 
-        withCredentials: 'include'
+        withCredentials: true
     }) 
     return res 
 }   

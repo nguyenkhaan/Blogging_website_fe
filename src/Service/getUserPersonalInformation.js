@@ -5,7 +5,7 @@ async function getUserPersonalInformation(id)
         headers: {
             "Content-Type": "application/json", //Nếu không set Header type thì Axios sẽ dự đoán dưa theo dữ liệu bạn gửi đi / truyền vào 
         }, 
-        withCredentials: 'include'
+        withCredentials: true
     })
     return res 
 }

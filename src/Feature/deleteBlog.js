@@ -5,7 +5,7 @@ async function deleteUserPersonalBlog(blogID , userID) {
         headers: {
             "Content-Type" : "application/json"
         }, 
-        withCredentials: 'include'
+        withCredentials: true
     })
     return res 
 }

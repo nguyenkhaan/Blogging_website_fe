@@ -4,7 +4,7 @@ async function getUserPersonalBlogs(id , isContent = true) {
         headers: {
             "Content-Type" : "application/json"
         }, 
-        withCredentials: 'include'
+        withCredentials: true
     })
     return data
 } 

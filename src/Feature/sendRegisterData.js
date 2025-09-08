@@ -6,7 +6,7 @@ async function sendReigsterData(email , password) {
         headers: {
             "Content-Type": "application/json"
         }, 
-        withCredentials: 'include'
+        withCredentials: true 
     })  //Promise 
     return res 
 } 

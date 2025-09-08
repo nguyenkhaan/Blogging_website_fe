@@ -5,7 +5,7 @@ async function getBlogByPage(page)
         headers: {
             "Content-Type" : "application/json"
         }, 
-        withCredentials: 'include'
+        withCredentials: true 
     }) 
     return res
 } 
