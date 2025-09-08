@@ -9,6 +9,7 @@ import MainLayout from "../Layout/MainLayout";
 import Blogs from "../Pages/Blogs";
 import Profile from "../Pages/Profile";
 import SearchBoard from '../Component/SearchBoard/SearchBoard';
+import ComingSoon from "../Pages/ComingSoon";
 //Define public Routes
 const publicRoutes = [
   {
@@ -66,6 +67,27 @@ const publicRoutes = [
     role: 'Profile Page',
     element: <MainLayout>
       <Profile></Profile>
+    </MainLayout>
+  },
+  {
+    path: '/series',
+    role: 'Series Page',
+    element: <MainLayout>
+      <ComingSoon></ComingSoon>
+    </MainLayout>
+  },
+  {
+    path: '/trending',
+    role: 'Trending Page',
+    element: <MainLayout>
+      <ComingSoon></ComingSoon>
+    </MainLayout>
+  },
+  {
+    path: '/category',
+    role: 'Category Page',
+    element: <MainLayout>
+      <ComingSoon></ComingSoon>
     </MainLayout>
   }
 ];

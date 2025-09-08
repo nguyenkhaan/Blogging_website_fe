@@ -5,7 +5,9 @@ import ReactPaginate from 'react-paginate'
 import BlogList from '../Component/Blogs/BlogList'
 import RankingList from '../Component/Blogs/RankingList'
 import api from '../Aixos/api'
-import { getBlogByPage } from '../Service/getBlogByPage'
+import { getBlogByPage } from '../Service/getBlogByPage' 
+import { useQuery } from "@tanstack/react-query";
+import { getTopUser } from '../Service/getTopUser'
 const sampleBlogData = {
     title: 'Đệ Quy (Recursion) trong Java | Giải thích và Ứng dụng',
     author: 'Nguyen Kha An',
@@ -44,7 +46,13 @@ function Blogs() {
     const [page, setPage] = useState(0)
     const [dataShow, setDataShow] = useState([])
     const [totalPage , setTotalPage] = useState(0) 
-
+    const {data} = useQuery({
+        queryKey: ['top' , 'author'], 
+        queryFn: async () => {
+            const res = await getTopUser(); 
+            return res.data.data 
+        }
+    })
     // [PAGE CHANGE] 
     const handlePageClick = ({ selected }) => {
         console.log(selected)
@@ -77,7 +85,7 @@ function Blogs() {
             <div className="w-full min-h-80  grid grid-cols-16 pt-4 gap-3">
 
                 <BlogList blogs={dataShow} />
-                <RankingList authors = {author} />
+                <RankingList authors = {data} />
 
             </div>
             <div className="w-full col-span-16 flex justify-center items-center my-6">

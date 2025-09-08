@@ -10,6 +10,7 @@ import { sendLoginData } from '../../Feature/sendLoginData'
 import personalSlice from '../../Redux/slices/personalSlice'
 import { getUserPersonalInformation } from '../../Service/getUserPersonalInformation'
 import { base64Encoded } from '../../Helper/base64Encoded'
+import { onSuccess , onError } from '../../Service/callingToast'
 function LoginForm() {
     const dispatch = useDispatch()
     const [loginState, setLoginState] = useState(0);
@@ -28,10 +29,10 @@ function LoginForm() {
             if (!localStorage.getItem('loginToken')) {
                 const res = await sendLoginData(Email, Password)
                     .then(data => {
-                        if (data.data.code == -1) onError()
+                        if (data.data.code == -1) onErrorLogin()
                         else {
                             const jwtToken = JSON.parse(data.data.token)
-                            onSuccess(jwtToken)   //truyen token de luu vao localStorage
+                            onSuccessLogin(jwtToken)   //truyen token de luu vao localStorage
                         }
                     })
             }
@@ -42,7 +43,7 @@ function LoginForm() {
     }
 
     //Tien hanh, luu du lieu vao trong Redux 
-    const onSuccess = async (token) => {
+    const onSuccessLogin = async (token) => {
         const [header, payload, signature] = token.split('.')
         const base64PayloadData = JSON.parse(base64Encoded(payload))
         dispatch(personalSlice.actions.addInfo(base64PayloadData))
@@ -56,11 +57,13 @@ function LoginForm() {
             console.log('>>> Data day ne: ', data.data.data)
         })
         setLoginState(1)
+        onSuccess('Đăng nhập thành công') //Goi toast để báo hiệu đang nhập thành công 
         setTimeout(() => {
             navigate('/')
         }, 1800)
     }
-    const onError = () => {
+    const onErrorLogin = () => {
+        onError('Đăng nhập thất bại - Vui lòng thử lại sau')
         setLoginState(-1);   //Đăng nhập thất bại 
     }
     const { register, handleSubmit, formState: { errors }, clearErrors } = useForm({

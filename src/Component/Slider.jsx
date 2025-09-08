@@ -29,7 +29,7 @@ export default function Slider({
                    
                     <div
                         className = "w-[1280px] flex-shrink-0 min-h-full bg-blue-600 bg-no-repeat bg-cover bg-center"
-                        // style = {{backgroundImage: `url(${img})`}}
+                        style = {{backgroundImage: `url(${img})`}}
                         
                     ></div>
                 ))}

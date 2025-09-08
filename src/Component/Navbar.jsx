@@ -44,14 +44,14 @@ function NavbarAbove() {
     return (
         <div>
             <div className="bg-blue-800 px-4 md:px-12 w-full h-12 flex items-center justify-between">
-                <ul className="flex text-sm md:text-base items-center p-0 gap-6 md:justify-between flex-3">
-                    <li>Lorem ispum</li>
-                    <li>Lorem ispum</li>
-                    <li>Lorem ispum</li>
-                    <li className="font-black">Lorem ispum dolor</li>
+                <ul className="flex text-sm md:text-base items-center p-0 gap-6 md:justify-between flex-3"> 
+                    <li className="font-medium">@Cre: cloudian & Thaian</li>
+                    <li className="hidden md:block"> · 𐔌՞. .՞𐦯 · ⋆°·</li>
+                    <li className="hidden md:block"> · 𐔌՞. .՞𐦯 · ⋆°·</li>
+                    <li className="font-black hidden md:block">☁︎｡⋆ · ⋆.ೃ࿔☁️ ݁ ˖*༄.</li>
                 </ul>
                 <div className="flex-1 hidden md:block"></div>
-                <div className="flex-2 hidden items-center md:flex justify-end gap-3 text-lg">
+                <div className="md:flex-2 flex-3 items-center flex justify-end gap-3 text-lg">
                     {login == false ? (
                         <>
                             {/* Nếu không đăng nhập thì hiển thị các icon */}

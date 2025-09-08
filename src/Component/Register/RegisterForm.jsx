@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form'
 import { useState, useEffect } from 'react'
 import Input from '../Input'
 import { sendReigsterData } from '../../Feature/sendRegisterData'
+import { onSuccess , onError } from '../../Service/callingToast'
 //Note
 /*
 0: Chưa làm gì hết 
@@ -34,8 +35,8 @@ function RegisterForm() {
                 const {Email , Password} = data 
                 const res = await sendReigsterData(Email , Password) 
                 .then(data => {
-                    if (data.data.code < 0) onError() 
-                        else onSuccess() 
+                    if (data.data.code < 0) onErrorRegister() 
+                        else onSuccessRegister() 
                 })
             }
         } catch (error) {
@@ -43,13 +44,15 @@ function RegisterForm() {
         }
         console.log(data);  //hiển thị thông tin gửi về 
     }
-    const onSuccess = () => {
+    const onSuccessRegister = () => {
         setRegisterState(1) 
+        onSuccess('Đăng ký thành công')
         setTimeout(() => {
             navigate('/')
         } , 1800)
     }
-    const onError = () => {
+    const onErrorRegister = () => {
+        onError('Đăng ký thất bại - Vui lòng thử lại')
         setRegisterState(-1);   //Đăng ký thất bại 
     }
     const { register, handleSubmit, formState: { errors }, clearErrors } = useForm({
