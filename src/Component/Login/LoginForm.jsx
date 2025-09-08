@@ -9,10 +9,9 @@ import api from '../../Aixos/api'
 import { sendLoginData } from '../../Feature/sendLoginData'
 import personalSlice from '../../Redux/slices/personalSlice'
 import { getUserPersonalInformation } from '../../Service/getUserPersonalInformation'
-
-function LoginForm() 
-{
-    const dispatch = useDispatch() 
+import { base64Encoded } from '../../Helper/base64Encoded'
+function LoginForm() {
+    const dispatch = useDispatch()
     const [loginState, setLoginState] = useState(0);
     const navigate = useNavigate();
     useEffect(() => {
@@ -24,18 +23,17 @@ function LoginForm()
     }, [loginState])
     const onSubmit = async (data) => {
         //Thuc hien call api 
-        const {Email , Password} = data 
+        const { Email, Password } = data
         try {
-            if (!localStorage.getItem('loginToken')) 
-            {
-                const res = await sendLoginData(Email , Password) 
-                .then(data => {
-                    if (data.data.code == -1) onError() 
+            if (!localStorage.getItem('loginToken')) {
+                const res = await sendLoginData(Email, Password)
+                    .then(data => {
+                        if (data.data.code == -1) onError()
                         else {
                             const jwtToken = JSON.parse(data.data.token)
                             onSuccess(jwtToken)   //truyen token de luu vao localStorage
                         }
-                }) 
+                    })
             }
             else navigate('/')
         } catch (error) {
@@ -45,16 +43,19 @@ function LoginForm()
 
     //Tien hanh, luu du lieu vao trong Redux 
     const onSuccess = async (token) => {
-        const [header , payload , signature] = token.split('.') 
-        dispatch(personalSlice.actions.addInfo(JSON.parse(atob(payload))))
-        const id = JSON.parse(atob(payload)).id
-        localStorage.setItem('loginToken' , token)  //Luu du lieu vao trong localStorage 
-         //Luu du lieu vao trong redux 
+        const [header, payload, signature] = token.split('.')
+        const base64PayloadData = JSON.parse(base64Encoded(payload))
+        dispatch(personalSlice.actions.addInfo(base64PayloadData))
+        // console.log(JSON.parse(atob(payload)))  
+        console.log(header, base64PayloadData, signature)
+        const id = base64PayloadData.id
+        localStorage.setItem('loginToken', token)  //Luu du lieu vao trong localStorage 
+        //Luu du lieu vao trong redux 
         getUserPersonalInformation(id).then((data) => {
             dispatch(personalSlice.actions.addInfo(data.data.data))   //Luu du lieu vao redux 
-            console.log('>>> Data day ne: ' , data.data.data)
-        })                                        
-        setLoginState(1) 
+            console.log('>>> Data day ne: ', data.data.data)
+        })
+        setLoginState(1)
         setTimeout(() => {
             navigate('/')
         }, 1800)
