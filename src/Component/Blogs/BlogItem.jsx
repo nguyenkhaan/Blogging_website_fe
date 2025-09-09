@@ -12,7 +12,7 @@ function BlogItem({ blogData, preview }) {
     return (
         <div className="flex gap-3 pb-4 items-start justify-between w-full min-h-20">
             <div
-                className="rounded-full w-8 h-8 md:w-12 md:h-12 bg-black bg-center bg-cover bg-no-repeat" //Avatar
+                className="rounded-full w-10 h-10 bg-black bg-center bg-cover bg-no-repeat shrink-0" //Avatar
                 style={{
                     backgroundImage: `url(${author.avatar})`,
                 }}></div>

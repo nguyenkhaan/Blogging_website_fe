@@ -18,7 +18,7 @@ function VerticalStyle() {
 
                     <motion.ul
                         key="dropdown"
-                        className="flex flex-col top-full z-99999 left-0 bg-blue-800 w-full justify-center p-0 text-lg absolute items-center"
+                        className="flex flex-col top-full z-99999 left-0 bg-blue-800 w-full justify-center p-0 text-base absolute items-center"
                         initial={{  y: '-12%' }}
                         animate={{  y: '0' }}
                         exit={{   y: '-12%' }}
