@@ -1,32 +1,35 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { useState } from 'react'
-const roundedNumber = (num) => (num > 1000) ? ((num / 1000).toFixed(1) + 'K') : num.toString()
-function AuthorItem({ authorData }) 
-{
-    const [followed , setFollowed] = useState(false) 
+import { Link } from 'react-router-dom';
+const roundedNumber = (num) => (num > 1000) ? ((num / 1000).toFixed(1) + 'K') : (num + '');
+function AuthorItem({ authorData }) {
+    const [followed, setFollowed] = useState(false)
     const handleFollowClick = () => {
-        setFollowed(!followed) 
+        setFollowed(!followed)
     }
-    const { name, email, famous, blogs, subscribers, follows } = authorData
+    const { name, email, userID ,  famous, blogs, subscribers, follows } = authorData
     return (
         <div className="w-full flex flex-col gap-3.5 mb-4">
             <div className="w-full flex items-center justify-between gap-3">
                 {/* Hinh nen tac gia */}
-                <div 
+                <div
                     className="rounded-full w-16 h-16 bg-black bg-no-repeat bg-cover bg-center"
-                    style = {{
-                        backgroundImage: 'url(Image/default-avatar.png)'
+                    style={{
+                        backgroundImage: `url(${authorData.avatar})`
                     }}
                 ></div>
                 <div className="flex-1 min-h-20 px-2 ">
                     {/* Ten (name) - dia chi Email (email) */}
-                    <h3 className="text-base text-blue-700">{name}</h3>
+                    <Link to = {`/profile?id=${userID}`}>
+
+                        <h3 className="text-base text-blue-700 hover:underline hover:text-blue-800 cursor-pointer">{name}</h3>
+                    </Link>
                     <h3 className="text-sm text-black mb-2">{email}</h3>
                     {/* Nut theo doi */}
-                    <button onClick = {handleFollowClick} className="rounded text-sm text-blue-500 transition-all duration-200 ease-linear px-2 text-left border-solid border-2 border-blue-700 hover:cursor-pointer hover:text-white hover:bg-blue-700">
+                    <button onClick={handleFollowClick} className="rounded text-sm text-blue-500 transition-all duration-200 ease-linear px-2 text-left border-solid border-2 border-blue-700 hover:cursor-pointer hover:text-white hover:bg-blue-700">
                         <span className="font-bold text-base">+ </span>
-                        {followed? 'Đã theo dõi' : 'Theo dõi'}
+                        {followed ? 'Đã theo dõi' : 'Theo dõi'}
                     </button>
                 </div>
             </div>

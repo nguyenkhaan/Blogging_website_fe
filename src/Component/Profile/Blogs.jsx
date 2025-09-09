@@ -10,9 +10,9 @@ function Blogs({ userBlogs }) {
                 <h2 className="text-2xl font-semibold block  w-full text-left font-sans mb-6 2xl:mb-8">
                     Danh sách bài viết
                 </h2>
-                {userBlogs == [] ? (
-                    <div className="text-center w-full italic text-xl">
-                        Không có bài viết nào
+                {!userBlogs || userBlogs.length == 0 ? (
+                    <div className="text-center w-full italic font-semibold text-xl">
+                        - Không có bài viết -
                     </div>
                 ) : (
                     <div className="w-full grid md:grid-cols-12 grid-cols-6 gap-4 2xl:gap-6">

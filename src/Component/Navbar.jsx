@@ -55,8 +55,8 @@ function NavbarAbove() {
                     {login == false ? (
                         <>
                             {/* Nếu không đăng nhập thì hiển thị các icon */}
-                            <i class="fa-brands fa-facebook"></i>
-                            <i class="fa-brands fa-square-instagram"></i>
+                            <i class="fa-brands fa-facebook text-sm md:text-base"></i>
+                            <i class="fa-brands fa-square-instagram text-sm md:text-base"></i>
                         </>
                     ) : (
                         //Đăng nhập rồi thì hiển thị icon Account
@@ -68,7 +68,7 @@ function NavbarAbove() {
                         <>
                             <Link to="/register">
                                 <motion.span
-                                    className="text-lg font-semibold block hover:cursor-pointer hover:underline mr-4"
+                                    className="text-xs md:text-lg font-semibold block hover:cursor-pointer hover:underline mr-4"
                                     initial={{ scale: 1 }}
                                     whileHover={{ scale: 1.1 }}
                                     transition={{
@@ -80,7 +80,7 @@ function NavbarAbove() {
                             </Link>
                             <Link to="/login">
                                 <motion.span
-                                    className="text-lg font-semibold block hover:cursor-pointer hover:underline"
+                                    className="text-xs md:text-lg font-semibold block hover:cursor-pointer hover:underline"
                                     initial={{ scale: 1 }}
                                     whileHover={{ scale: 1.1 }}
                                     transition={{

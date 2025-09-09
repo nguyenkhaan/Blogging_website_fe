@@ -50,7 +50,8 @@ function Blogs() {
         queryKey: ['top' , 'author'], 
         queryFn: async () => {
             const res = await getTopUser(); 
-            return res.data.data 
+            console.log(res.data.data);
+            return res.data.data
         }
     })
     // [PAGE CHANGE] 
@@ -85,7 +86,7 @@ function Blogs() {
             <div className="w-full min-h-80  grid grid-cols-16 pt-4 gap-3">
 
                 <BlogList blogs={dataShow} />
-                <RankingList authors = {data} />
+                {data && <RankingList authors = {data} />} 
 
             </div>
             <div className="w-full col-span-16 flex justify-center items-center my-6">

@@ -59,7 +59,7 @@ export default function PostsBoard({setCurrentBoard}) {
                     My posts
                 </h2>
 
-                <label
+                {/* <label
                     htmlFor=""
                     className="border-1 h-10 flex justify-between items-center rounded-[5px] w-60 overflow-hidden">
                     <input
@@ -74,7 +74,7 @@ export default function PostsBoard({setCurrentBoard}) {
                         className="w-10 h-10 shrink-0 bg-[#193CB8] text-white cursor-pointer hover:text-[17px] duration-100">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
-                </label>
+                </label> */}
             </div>
 
             <ul className="flex flex-col gap-5 w-full justify-center items-center">

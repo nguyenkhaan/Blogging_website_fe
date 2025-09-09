@@ -28,7 +28,7 @@ export default function Slider({
                 {slides.map((img) => (
                    
                     <div
-                        className = "w-[1280px] flex-shrink-0 min-h-full bg-blue-600 bg-no-repeat bg-cover bg-center"
+                        className = "md:w-[1280px] w-screen flex-shrink-0 min-h-full bg-blue-600 bg-no-repeat bg-cover bg-center"
                         style = {{backgroundImage: `url(${img})`}}
                         
                     ></div>

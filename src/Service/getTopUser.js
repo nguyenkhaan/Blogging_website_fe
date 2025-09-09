@@ -6,5 +6,6 @@ async function getTopUser() {
         }, 
         withCredentials: true 
     })
+    return res; 
 } 
 export {getTopUser}
