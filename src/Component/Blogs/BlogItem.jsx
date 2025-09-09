@@ -29,7 +29,7 @@ function BlogItem({ blogData, preview }) {
                         {new Date(createdAt).toLocaleDateString("vi-VN")}
                     </span>
                     <span className="block mx-2">-</span>
-                    <span title="20 phút đọc">{readingTime} phút đọc</span>
+                    <span title={`${readingTime}phút đọc`} className="">{readingTime} phút đọc</span>
                 </div>
                 {/* Tieu de bai viet */}
                 <Link to = {`/blog/?id=${blogID}`}>
