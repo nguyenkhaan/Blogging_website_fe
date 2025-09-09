@@ -28,8 +28,8 @@ function BlogItem({ blogData, preview }) {
                     <span title={`${new Date(createdAt).toLocaleDateString("vi-VN")}`}>
                         {new Date(createdAt).toLocaleDateString("vi-VN")}
                     </span>
-                    <span className="block mx-2">-</span>
-                    <span title={`${readingTime}phút đọc`} className="">{readingTime} phút đọc</span>
+                    <span className="hidden md:block mx-2">-</span>
+                    <span title={`${readingTime}phút đọc`} className="hidden md:block">{readingTime} phút đọc</span>
                 </div>
                 {/* Tieu de bai viet */}
                 <Link to = {`/blog/?id=${blogID}`}>
