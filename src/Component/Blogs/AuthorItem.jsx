@@ -35,10 +35,10 @@ function AuthorItem({ authorData }) {
             </div>
             {/* Thanh tich tong quan */}
             <div className="px-4 flex gap-2 items-center text-sm text-gray-600 justify-between">
-                <span className="block cursor-default" title="Reputations: 5.6K"><i class="fa-solid fa-star"></i> {Math.floor(famous)}</span>
-                <span className="block cursor-default" title="Tổng số bài viết: 4.7K"><i class="fa-solid fa-pencil"></i> {roundedNumber(blogs)}</span>
-                <span className="block cursor-default" title="Người theo dõi: 4.7K"><i class="fa-solid fa-user-plus" title="Người theo dõi"></i> {roundedNumber(follows)}</span>
-                <span className="block cursor-default" title="Tổng số lượt xem: 5.6K"><i class="fa-solid fa-eye"></i> {roundedNumber(subscribers)}</span>
+                <span className="block cursor-default" title="Reputations: 5.6K"><i class="fa-solid fa-star"></i> {Math.floor(famous || 0)}</span>
+                <span className="block cursor-default" title="Tổng số bài viết: 4.7K"><i class="fa-solid fa-pencil"></i> {roundedNumber(blogs || 0)}</span>
+                <span className="block cursor-default" title="Người theo dõi: 4.7K"><i class="fa-solid fa-user-plus" title="Người theo dõi"></i> {roundedNumber(follows || 0)}</span>
+                <span className="block cursor-default" title="Tổng số lượt xem: 5.6K"><i class="fa-solid fa-eye"></i> {roundedNumber(subscribers || 0)}</span>
             </div>
         </div>
     )
